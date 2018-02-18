@@ -8,13 +8,13 @@ def main():
     x = int(input())
     cnt = 0
     for i in range(a + 1):
-        y = x - 500 * i
+        y = x % 500
         if y <= 0:
             if y == 0:
                 cnt += 1
             break
         for j in range(b + 1):
-            z = y - 100 * j
+            z = y % 100
             if z <= 0:
                 if z == 0:
                     cnt += 1
