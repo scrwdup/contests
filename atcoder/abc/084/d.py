@@ -16,7 +16,7 @@ def sieve(n):
     isprime[0] = isprime[1] = False
     isprime[2] = True
 
-    from math import sqrt, ceil
+    from math import sqrt
 
     for i in range(3, int(sqrt(n)) + 1):
         if isprime[i] == True:
