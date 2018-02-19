@@ -3,12 +3,10 @@
 
 import sys
 
-k = 0
-l = 0
 acc = None
 
 def count_up(y1, x1, y2, x2):
-    global acc, l
+    global acc
     if y1 > y2 or x1 > x2:
         return 0
     y2 += 1
@@ -16,7 +14,7 @@ def count_up(y1, x1, y2, x2):
     return  acc[y2][x2] - acc[y1][x2] - acc[y2][x1] + acc[y1][x1]
 
 def main():
-    global acc, k, l
+    global acc
     n, k = map(int, sys.stdin.readline().split())
     xycs = (map(lambda x: int(x) if x != 'B' and x != 'W' else x,
                  line.split()) for line in sys.stdin.readlines())
